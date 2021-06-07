@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="graphene-mongo",
-    version="0.3.1",
+    version="0.3.2",
     description="Graphene Mongoengine integration",
     long_description=open("README.rst").read(),
     url="https://github.com/graphql-python/graphene-mongo",
@@ -22,7 +22,7 @@ setup(
         "License :: OSI Approved :: MIT License",
     ],
     keywords="api graphql protocol rest relay graphene mongo mongoengine",
-    packages=find_packages(exclude=["tests"]),
+    packages=find_packages(exclude=('tests*',)),
     install_requires=[
         "graphene>=2.1.3,<3",
         "mongoengine>=0.15.0",
